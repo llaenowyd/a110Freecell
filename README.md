@@ -1,6 +1,6 @@
 # a110 Material Freecell
 
-<img src="media/screenshot1.png" width=250>  | <img src="media/screenshot2.png" width=250>
+<img src="media/screenshot1.png" width=250> <img src="media/screenshot2.png" width=250>
 
 Please note! This source code is a bit rough as this was my
 first project using Dart or Flutter. There are doubtlessly
