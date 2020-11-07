@@ -1,8 +1,7 @@
 # a110 Material Freecell
 
-[[https://github.com/llaenowyd/a110Freecell/blob/master/media/screenshot1.png|emulator screenshot]]
-
-[[https://github.com/llaenowyd/a110Freecell/blob/master/media/screenshot2.png|emulator screenshot]]
+<img src="media/screenshot1.png" width=300>
+<img src="media/screenshot2.png" width=300>
 
 Please note! This source code is a bit rough as this was my
 first project using Dart or Flutter. There are doubtlessly
