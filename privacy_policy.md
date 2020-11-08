@@ -2,7 +2,7 @@
 
 ## Material Freecell
 
-### Privacy Policy - Applies to "com.a110.materialfreecell" [the App] published in the Google Play Store
+### Privacy Policy - Applies to "com.a110.freecell" [the App] published in the Google Play Store
 
 * What data is collected
   * Aggregated or anonymized statistics about app performance, crashes and user installs/de-installs
