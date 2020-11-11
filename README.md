@@ -1,6 +1,6 @@
 # a110 Material Freecell
 
-Coming soon!
+ 📲 [Get it on the Google Play Store!](https://play.google.com/store/apps/details?id=com.a110.freecell)
 
 <img src="media/screenshot1.png" width=250> <img src="media/screenshot2.png" width=250>
 
