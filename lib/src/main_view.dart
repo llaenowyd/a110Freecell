@@ -35,11 +35,9 @@ class View extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15.0),
               child: FittedBox(
                 fit: BoxFit.fitWidth,
-                child: Text(
-                  'Material Freecell',
-                  style: GoogleFonts.frederickaTheGreat(
-                      textStyle: Theme.of(context).textTheme.headline5),
-                ),
+                child: Text('Material Freecell',
+                    style: GoogleFonts.getFont('Fredericka the Great',
+                        textStyle: Theme.of(context).textTheme.headline5)),
               ),
             ),
           ),

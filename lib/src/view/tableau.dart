@@ -53,8 +53,8 @@ class Tableau extends StatelessWidget {
         offsetPerCard.indexWhere(
             (opcAtScrunch) => cardCount <= scrunchFit(opcAtScrunch)));
 
-    print(
-        'scrunchLevel $scrunchLevel ($tableauHeight, $cardHeight, $cardCount)');
+    // print(
+    //     'scrunchLevel $scrunchLevel ($tableauHeight, $cardHeight, $cardCount)');
 
     final opcAtScrunch = offsetPerCard[scrunchLevel];
 

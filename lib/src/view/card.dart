@@ -86,13 +86,12 @@ class Card extends StatelessWidget {
                         children: [
                           Text(
                             _model.rank.toString(),
-                            style: GoogleFonts.unicaOne(
-                              textStyle: TextStyle(
-                                color: color,
-                                fontSize: faceStyle.getFontSize(),
-                                letterSpacing: -2.0,
-                              ),
-                            ),
+                            style: GoogleFonts.getFont('Unica One',
+                                textStyle: TextStyle(
+                                  color: color,
+                                  fontSize: faceStyle.getFontSize(),
+                                  letterSpacing: -2.0,
+                                )),
                           ),
                           _model.suit == models.Suit.hearts
                               ? _makeHearts(faceStyle, color)

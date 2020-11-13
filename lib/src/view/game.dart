@@ -52,10 +52,9 @@ class _GameState extends State<Game> {
 
     setState(() {
       final verticalPadding = 5.0;
-      final horizontalPadding = 5.0;
 
       _size = renderBox.size;
-      _cardWidth = _size.width * 0.90 / 7.0;
+      _cardWidth = _size.width * 0.92 / 7.0;
       _cardHeight = Card.getHeight(_cardWidth);
 
       _freecellsSize = Size(_size.width / 2.0, _cardHeight);
@@ -125,15 +124,12 @@ class _GameState extends State<Game> {
       model.foundation4,
     ];
 
-    final result = List<Widget>();
+    final List<Widget> result = List<Widget>();
 
     for (var i = 0; i < foundationsModel.length; i++) {
-      var y = _foundationsOffset.dy;
-      print(
-          'foundation ${i + 1} at left ${_foundationsOffset.dx + i * _foundationCardWidth}');
       result.add(Positioned(
           left: _foundationsOffset.dx + i * _foundationCardWidth,
-          top: y,
+          top: _foundationsOffset.dy,
           child: Foundation(controller, Size(_cardWidth, _cardHeight), i + 1,
               foundationsModel[i])));
     }
@@ -190,12 +186,12 @@ class _GameState extends State<Game> {
             children: _isNotSized()
                 ? []
                 : model.mode == 'logo'
-                ? [_makeLogo()]
-                : [
-                    ..._makeFreecells(model, controller),
-                    ..._makeFoundations(model, controller),
-                    ..._makeTableaux(model, controller),
-                  ]),
+                    ? [_makeLogo()]
+                    : [
+                        ..._makeFreecells(model, controller),
+                        ..._makeFoundations(model, controller),
+                        ..._makeTableaux(model, controller),
+                      ]),
       ),
     );
 
