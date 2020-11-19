@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 import 'src/main_view.dart';
 
 void main() {
+  // LicenseRegistry.addLicense(() async* {
+  // yield LicenseEntryWithLineBreaks(['google_fonts'],
+  //     await rootBundle.loadString('google_fonts/OFL_fred_the_great.txt'));
+  // yield LicenseEntryWithLineBreaks(['google_fonts'],
+  //     await rootBundle.loadString('google_fonts/OFL_unica_one.txt'));
+  // });
+
   // SystemChrome.setEnabledSystemUIOverlays([]);
   runApp(MaterialFreecell());
 }
