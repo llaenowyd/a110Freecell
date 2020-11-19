@@ -17,6 +17,9 @@ class CardDragTarget extends StatelessWidget {
   Widget build(BuildContext context) => DragTarget<models.MoveParticipant>(
       builder: (_a, _b, _c) => child,
       onWillAccept: (otherDragParticipant) {
+        if (dragParticipant.kind == otherDragParticipant.kind &&
+            dragParticipant.id == otherDragParticipant.id) return false;
+
         print('onWillAccept $dragParticipant $otherDragParticipant');
         return controller.rules
             .willAccept(dragParticipant, otherDragParticipant);

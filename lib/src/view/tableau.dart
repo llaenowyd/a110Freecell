@@ -13,10 +13,12 @@ class Tableau extends StatelessWidget {
     var idx = 0;
     final limit = list.length - (n - 1);
     final acc = new List<List<models.CardPlacement>>();
+
     while (idx < limit) {
       acc.add(list.sublist(idx, idx + n));
       idx += 1;
     }
+
     return acc;
   }
 
@@ -52,9 +54,6 @@ class Tableau extends StatelessWidget {
     final scrunchLevel = ((sl) => sl == -1 ? offsetPerCard.length - 1 : sl)(
         offsetPerCard.indexWhere(
             (opcAtScrunch) => cardCount <= scrunchFit(opcAtScrunch)));
-
-    // print(
-    //     'scrunchLevel $scrunchLevel ($tableauHeight, $cardHeight, $cardCount)');
 
     final opcAtScrunch = offsetPerCard[scrunchLevel];
 
@@ -116,16 +115,14 @@ class Tableau extends StatelessWidget {
 
         return Container(
             constraints: BoxConstraints.tight(_size),
-            child: Stack(children: [
-              hasCards
-                  ? EmptyTableau(_size.width)
-                  : CardDragTarget(
-                      controller: _controller,
-                      child: EmptyTableau(_size.width),
-                      dragParticipant: models.MoveParticipant(
-                          kind: models.MoveParticipantKind.tableau,
-                          id: _tableauNumber)),
-              if (hasCards) _makeDragStack(),
-            ]));
+            child: CardDragTarget(
+                controller: _controller,
+                dragParticipant: models.MoveParticipant(
+                    kind: models.MoveParticipantKind.tableau,
+                    id: _tableauNumber),
+                child: Stack(children: [
+                  EmptyTableau(_size.width),
+                  if (hasCards) _makeDragStack(),
+                ])));
       });
 }

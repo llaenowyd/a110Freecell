@@ -48,9 +48,12 @@ class Rules {
 
     if (destinationTableau.cards.isEmpty)
       return true;
-    else
-      return destination.card.suit.alternates(source.card.suit) &&
-          source.card.rank.precedes(destination.card.rank);
+    else {
+      final destinationCard = destinationTableau.cards.last.card;
+
+      return destinationCard.suit.alternates(source.card.suit) &&
+          source.card.rank.precedes(destinationCard.rank);
+    }
   }
 
   bool willAccept(
