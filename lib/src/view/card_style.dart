@@ -19,25 +19,26 @@ class CardStyle {
   double Function() getBorderRadius;
 
   CardStyle(CardStyleEnum style) {
+    final basicSuitBox = Size(10.0, 10.0);
     if (style == CardStyleEnum.normal) {
       getColor = (cardModel) => cardModel.suit == models.Suit.hearts ||
               cardModel.suit == models.Suit.diamonds
           ? Colors.red.shade900
           : Colors.black;
-      getSuitBox = () => Size(10.0, 10.0);
+      getSuitBox = () => basicSuitBox;
       getBackgroundColor = (_) => Colors.lime.shade50;
       getFontSize = () => 15.0;
       getBorderRadius = () => 4.0;
     } else if (style == CardStyleEnum.inPlayAnchor) {
       getColor = (_) => Colors.cyan;
       getBackgroundColor = (_) => Colors.cyan.shade50;
-      getSuitBox = () => Size(10.0, 10.0);
+      getSuitBox = () => basicSuitBox;
       getFontSize = () => 15.0;
       getBorderRadius = () => 4.0;
     } else if (style == CardStyleEnum.inPlayInMotion) {
       getColor = (_) => Colors.purple;
       getBackgroundColor = (_) => Colors.cyan.shade50.withOpacity(0.6);
-      getSuitBox = () => Size(10.0, 10.0);
+      getSuitBox = () => basicSuitBox;
       getFontSize = () => 15.0;
       getBorderRadius = () => 4.0;
     } else if (style == CardStyleEnum.small) {
@@ -50,7 +51,7 @@ class CardStyle {
       // CardFaceStyleEnum.open
       getColor = (_) => Colors.pink;
       getBackgroundColor = (_) => Colors.lime.shade50;
-      getSuitBox = () => Size(10.0, 10.0);
+      getSuitBox = () => basicSuitBox;
       getFontSize = () => 15.0;
       getBorderRadius = () => 4.0;
     }

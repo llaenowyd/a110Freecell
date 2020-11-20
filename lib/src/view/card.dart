@@ -31,9 +31,9 @@ class Card extends StatelessWidget {
       height: faceStyle.getSuitBox().height,
       child: Diamonds(color: color));
   _makeHearts(faceStyle, color) => Padding(
-        padding: EdgeInsets.only(left: 1.0),
+        padding: EdgeInsets.only(left: 0.5),
         child: SizedBox(
-          width: faceStyle.getSuitBox().width * 0.9,
+          width: faceStyle.getSuitBox().width,
           height: faceStyle.getSuitBox().height,
           child: Hearts(color: color),
         ),
